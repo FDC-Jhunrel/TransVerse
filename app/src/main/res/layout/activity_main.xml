@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:id="@+id/mainLayout">
+
+    <TextView
+        android:id="@+id/tvTranslation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:text="@string/transVerse"
+        android:textAlignment="center"
+        android:textColor="@color/red"
+        android:textSize="40sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="3"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="20dp">
+        
+        <Spinner
+            android:id="@+id/spinnerSource"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="3dp"
+            android:gravity="center"
+
+            />
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/baseline_arrow_right_alt_24"
+            app:tint="@color/black_shade1"
+            android:gravity="center"/>
+
+        <Spinner
+            android:id="@+id/spinnerTarget"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="3dp"
+            android:padding="3dp"
+            android:gravity="center"/>
+    </LinearLayout>
+    
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="10dp"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:hint="@string/type_a_word_or_phrase_to_translate">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/etSTT"
+            android:ems="10"
+            android:importantForAutofill="no"
+            android:inputType="textImeMultiLine|textMultiLine"
+            android:textSize="18sp"
+            android:background="@drawable/input_field"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <ImageButton
+        android:id="@+id/btnSpeak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:layout_gravity="center"
+        android:contentDescription="@string/button_label"
+        android:src="@drawable/baseline_mic_24"
+        android:text="@string/button_label"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/speech_option"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <Button
+        android:id="@+id/btnTranslate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:textColor="@color/red"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/translate"
+        android:textSize="18sp"/>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    android:layout_marginTop="30dp"
+    android:background="@drawable/rounded_corner">
+    <TextView
+        android:id="@+id/tvTranslatedText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
+        android:gravity="center"
+        android:textColor="@color/teal_700"
+        android:textStyle="bold"
+        android:textSize="16dp"
+        android:text="Translated text here"/>
+</ScrollView>
+
+    <ImageButton
+        android:id="@+id/btnSpeaker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_bg"
+        android:contentDescription="@string/button_label"
+        android:src="@drawable/baseline_campaign_24"
+        android:text="@string/button_label"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/play_audio"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"/>
+
+    <TextView
+        android:id="@+id/tvSignout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/signout"
+        android:textColor="@color/red"
+        android:textStyle="italic"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"/>
+
+</LinearLayout>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Login"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp">
+
+   <TextView
+       android:id="@+id/tvLogin"
+       android:textColor="@color/black"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="35dp"
+       android:gravity="center"
+       android:text="@string/login"
+       android:textSize="40sp"
+       android:textStyle="bold"/>
+   <com.google.android.material.textfield.TextInputLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginBottom="10dp">
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/email"
+          android:hint="@string/email"
+          android:background="@drawable/input_field"
+          android:gravity="center"/>
+   </com.google.android.material.textfield.TextInputLayout>
+   <com.google.android.material.textfield.TextInputLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+      <com.google.android.material.textfield.TextInputEditText
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/password"
+          android:hint="@string/password"
+          android:inputType="textPassword"
+          android:layout_marginBottom="10dp"
+          android:background="@drawable/input_field"
+          android:gravity="center"/>
+   </com.google.android.material.textfield.TextInputLayout>
+   <ProgressBar
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:visibility="gone"
+       android:id="@+id/pbLogin"/>
+
+   <Button
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/btnLogin"
+       android:text="@string/login"
+       />
+
+   <TextView
+       android:id="@+id/hlLogin"
+       android:textSize="20sp"
+       android:gravity="center"
+       android:layout_marginTop="20dp"
+       android:textStyle="bold"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/click_to_register"
+       android:textColor="@color/red"/>
+
+
+</LinearLayout>

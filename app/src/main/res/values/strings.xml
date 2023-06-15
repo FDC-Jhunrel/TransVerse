@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">TransVerse</string>
+    <string name="button_label">Speak</string>
+    <string name="login">Login</string>
+    <string name="email">Enter email</string>
+    <string name="password">Enter password</string>
+    <string name="register">Register</string>
+    <string name="click_to_login">Click to login</string>
+    <string name="click_to_register">Click to Register</string>
+    <string name="source_text">Source Text</string>
+    <string name="speech_option">Speech Option</string>
+    <string name="transVerse">TransVerse</string>
+    <string name="type_a_word_or_phrase_to_translate">Type a word or phrase to translate</string>
+    <string name="signout">Signout</string>
+    <string name="profile">Profile</string>
+    <string name="home">Home</string>
+    <string name="play_audio">Play Audio</string>
+    <string name="translate">Translate</string>
+
+</resources>

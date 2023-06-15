@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "401008360968",
+    "project_id": "transncproj",
+    "storage_bucket": "transncproj.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:401008360968:android:168921a795b35c3eac5bbd",
+        "android_client_info": {
+          "package_name": "com.example.speechtranslation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "401008360968-65k9cg4iu956nosuuknharhpn3ejgl95.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjMAIjiczaIPd1s4DsCzuOW483ZMfEAps"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "401008360968-65k9cg4iu956nosuuknharhpn3ejgl95.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
