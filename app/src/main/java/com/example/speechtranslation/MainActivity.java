@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -26,6 +27,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.speechtranslation.Activities.Login;
+import com.example.speechtranslation.AuthenticationTokens.TokenAuthentication;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -42,10 +44,10 @@ public class  MainActivity extends AppCompatActivity {
     private Button btnTranslate;
     private TextView tvTranslatedText, tvSignout, tvTranslation;
     private TextInputEditText etSTT;
-    private static final String TRANSLATE_API_URL = "https://translation.googleapis.com/language/translate/v2?";
-    private static final String TEXT_TO_SPEECH_URL = "https://texttospeech.googleapis.com/v1/text:synthesize?";
-    private static final String KEY = "key=AIzaSyBHyupTlNppWfDqgceWb7ynXrhMpDXlq-4";
-    private static final String API_URL = TEXT_TO_SPEECH_URL+KEY;
+//    private static final String TRANSLATE_API_URL = "https://translation.googleapis.com/language/translate/v2?";
+//    private static final String TEXT_TO_SPEECH_URL = "https://texttospeech.googleapis.com/v1/text:synthesize?";
+//    private static final String KEY = "key=AIzaSyBHyupTlNppWfDqgceWb7ynXrhMpDXlq-4";
+//    private static final String API_URL = TEXT_TO_SPEECH_URL+KEY;
     private Spinner spSource, spTarget;
     private String  sourceLang[] = {"English","Japanese","Korean","Taiwanese","Vietnamese","Filipino" };
     private String targetLang[] = {"Japanese","Korean","Taiwanese","Vietnamese","Filipino","English"};
@@ -58,6 +60,7 @@ public class  MainActivity extends AppCompatActivity {
     private String[] strings = {"TransVerse", "トランスバース", "횡축", "Ngang", "橫"} ;
     private int currentIndex = 0;
     private MediaPlayer mediaPlayer;
+    private TokenAuthentication auth;
 
 
     @Override
@@ -77,6 +80,7 @@ public class  MainActivity extends AppCompatActivity {
         btnTranslate.setBackgroundColor(getResources().getColor(R.color.black));
         textAnim();
 
+         auth = new TokenAuthentication();
 
 //      Set spinner values for source language
         ArrayAdapter<String> adapterSource = new ArrayAdapter<>(MainActivity.this, android.R.layout.simple_spinner_item, sourceLang);
@@ -237,14 +241,13 @@ public class  MainActivity extends AppCompatActivity {
         String sourceText = etSTT.getText().toString();
         // Instantiate the RequestQueue.
         RequestQueue queue = Volley.newRequestQueue(MainActivity.this);
-        String url = TRANSLATE_API_URL
-                + KEY
+        String url = auth.getSuffixTranslateApiURl()
                 + "&source=" +selectedSource
                 + "&target=" + selectedTarget
                 + "&q=" +sourceText;
 
 //      Request a string response from the provided URL.
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null,
+        JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, url, null,
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
@@ -262,6 +265,7 @@ public class  MainActivity extends AppCompatActivity {
             @Override
             public void onErrorResponse(VolleyError error) {
                 Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
+                Log.e("TranslateAPI", "Volley Error: " + error.toString());
             }
         });
 //      Add the request to the RequestQueue.
@@ -339,7 +343,7 @@ public class  MainActivity extends AppCompatActivity {
         // Create a Volley request
         JsonObjectRequest request = new JsonObjectRequest(
                 Request.Method.POST,
-                API_URL,
+                auth.getFinalTextToSpeechUrl(),
                 jsonPayload,
                 new Response.Listener<JSONObject>() {
                     @Override
@@ -382,5 +386,6 @@ public class  MainActivity extends AppCompatActivity {
         Volley.newRequestQueue(MainActivity.this).add(request);
 
     }
+
 
 }

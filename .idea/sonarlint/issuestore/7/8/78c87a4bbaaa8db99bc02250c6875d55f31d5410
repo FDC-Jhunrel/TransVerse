@@ -1,0 +1,85 @@
+
+e
+java:S11922"JDefine a constant instead of duplicating this literal "Taiwanese" 6 times.(ÎéÄˆøÿÿÿÿ
+h
+java:S1192["RDefine a constant instead of duplicating this literal "source language: " 6 times.(ãıµø
+d
+java:S11922"IDefine a constant instead of duplicating this literal "Filipino" 6 times.(ÎéÄˆøÿÿÿÿ
+n
+java:S1192ƒ"RDefine a constant instead of duplicating this literal "target language: " 6 times.(Á“—Šşÿÿÿÿ
+b
+java:S11922"GDefine a constant instead of duplicating this literal "Korean" 6 times.(ÎéÄˆøÿÿÿÿ
+d
+java:S11922"IDefine a constant instead of duplicating this literal "Japanese" 4 times.(ÎéÄˆøÿÿÿÿ
+c
+java:S11922"HDefine a constant instead of duplicating this literal "English" 6 times.(ÎéÄˆøÿÿÿÿ
+f
+java:S11922"KDefine a constant instead of duplicating this literal "Vietnamese" 6 times.(ÎéÄˆøÿÿÿÿ
+D
+java:S1604£"(Make this anonymous inner class a lambda(†Œá•şÿÿÿÿ
+D
+java:S1604ª"(Make this anonymous inner class a lambda(ãÊ§Ëşÿÿÿÿ
+?
+java:S1604²"(Make this anonymous inner class a lambda(úÒì¸
+D
+java:S1604º"(Make this anonymous inner class a lambda(êŸÑÄûÿÿÿÿ
+?
+java:S1604ø"(Make this anonymous inner class a lambda(ÑÂğ
+D
+java:S1604…"(Make this anonymous inner class a lambda(´¸©”üÿÿÿÿ
+?
+java:S1604Ø"(Make this anonymous inner class a lambda(ÑÂğ
+>
+java:S1604ö"(Make this anonymous inner class a lambda(–§º
+u
+java:S11046"ZMake selectedSource a static final constant or non-public and provide accessors if needed.(ÍÏæÒıÿÿÿÿ
+u
+java:S11046"ZMake selectedTarget a static final constant or non-public and provide accessors if needed.(ÍÏæÒıÿÿÿÿ
+^
+java:S2259æ"BA "NullPointerException" could be thrown; "data" is nullable here.(È¸½”øÿÿÿÿ
+e
+java:S2095ç"NUse try-with-resources or close this "FileOutputStream" in a "finally" clause.(ãŞ»
+C
+java:S1659)"(Declare "btnSpeaker" on a separate line.(­º ûÿÿÿÿ
+a
+java:S1659+"FDeclare "tvSignout" and all following declarations on a separate line.(Ô¹ÛÙûÿÿÿÿ
+A
+java:S16591"&Declare "spTarget" on a separate line.(ˆà€ıÿÿÿÿ
+G
+java:S16596",Declare "selectedTarget" on a separate line.(ÍÏæÒıÿÿÿÿ
+r
+java:S1450)"WRemove the "btnSpeak" field and declare it as a local variable in the relevant methods.(­º ûÿÿÿÿ
+t
+java:S1450)"YRemove the "btnSpeaker" field and declare it as a local variable in the relevant methods.(­º ûÿÿÿÿ
+v
+java:S1450*"[Remove the "btnTranslate" field and declare it as a local variable in the relevant methods.(ä“÷şÿÿÿÿ
+s
+java:S1450+"XRemove the "tvSignout" field and declare it as a local variable in the relevant methods.(Ô¹ÛÙûÿÿÿÿ
+E
+java:S11972"*Move the array designators [] to the type.(ÎéÄˆøÿÿÿÿ
+@
+java:S11973"*Move the array designators [] to the type.(¸ÒÁİ
+E
+java:S1874M"0Remove this use of "getColor"; it is deprecated.(©–€"
+œ
+java:S1186u"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ
+7	java:S131X""Add a default case to this switch.(†ûşş
+
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¹Æº×şÿÿÿÿ
+W	java:S125±"<This block of commented-out lines of code should be removed.(¹œ˜úÿÿÿÿ
+X
+java:S1854µ"<Remove this useless assignment to local variable "toSpeech".(éæõ¿úÿÿÿÿ
+I
+java:S1481µ"-Remove this unused "toSpeech" local variable.(éæõ¿úÿÿÿÿ
+=	java:S131Æ""Add a default case to this switch.(æ ˆŒùÿÿÿÿ
+T
+java:S1874Ş">Remove this use of "startActivityForResult"; it is deprecated.(Ö­Ìa
+`
+java:S1874â"JDon't override a deprecated method or explicitly mark it as "@Deprecated".(¹Î¾
+F
+java:S1874"/Remove this use of "Handler"; it is deprecated.(õÊëì
+i	java:S100°"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÂÒçêúÿÿÿÿ
+Q
+java:S1874í":Remove this use of "setAudioStreamType"; it is deprecated.(ªåÂ›
+Q
+java:S10685";Remove this unused "REQUEST_PERMISSION_CODE" private field.(•øş¹
