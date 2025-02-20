@@ -6,9 +6,3 @@ name = "kotlin"
   [analyzers.meta]
   runtime_version = "1.8"
   language_version = "1.9"
-
-[[analyzers]]
-name = "java"
-
-  [analyzers.meta]
-  runtime_version = "8"
